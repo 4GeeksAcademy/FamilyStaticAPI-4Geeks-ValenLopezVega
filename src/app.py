@@ -46,7 +46,7 @@ def create_member():
             return jsonify({'message': 'Missing required field'}), 400
 
     new_member = jackson_family.add_member(body)
-    return jsonify(new_member), 201
+    return jsonify(new_member), 200
 
 
 @app.route('/members/<int:the_id>', methods=['GET'])
